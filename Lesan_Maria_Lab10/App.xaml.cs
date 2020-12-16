@@ -1,7 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using System;
 using Lesan_Maria_Lab10.Data;
 using System.IO;
 
