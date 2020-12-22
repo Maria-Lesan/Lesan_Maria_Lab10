@@ -5,6 +5,8 @@ using SQLite;
 
 namespace Lesan_Maria_Lab10.Models
 {
+    //Aceasta clasa defineste un model ShopList care va fi folosit pentru a salva fiecare lista de
+//cumparaturi in aplicatia noastra
     public class ShopList
     {
         [PrimaryKey, AutoIncrement]

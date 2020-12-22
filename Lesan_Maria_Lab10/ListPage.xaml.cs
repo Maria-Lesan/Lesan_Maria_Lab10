@@ -17,7 +17,13 @@ namespace Lesan_Maria_Lab10
         {
             InitializeComponent();
         }
-
+        //Await specifica compilatorului ca undeva in metoda pe care o apelam,
+    //    o parte din cod se va executa pe un fir de executie din background
+//utilizand un task si sa astepte rularea restului de cod din metoda pana
+//cand metoda marcata await termina ce are de facut
+//• Intre timp, thread-ul curent poate procesa cealalta parte a codului si
+//dupa finalizarea executiei metodei marcate cu await se executa si
+//cealalta parte
         async void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var slist = (ShopList)BindingContext;
@@ -25,16 +31,16 @@ namespace Lesan_Maria_Lab10
             await App.Database.SaveShopListAsync(slist);
             await Navigation.PopAsync();
         }
-        async void OnDeleteButtonClicked(object sender, EventArgs e)
+        async void OnDeleteButtonClicked(object sender, EventArgs e)  //• Async – prescurtarea de la asynchronous—se pot executa mai multe actiuni simultan(cod multithreaded – cod asynchron)
         {
             var slist = (ShopList)BindingContext;
             await App.Database.DeleteShopListAsync(slist);
-            await Navigation.PopAsync();
+            await Navigation.PopAsync();   //pagina nemodala - navigare la pag anterioara
         }
         async void OnChooseButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ProductPage((ShopList)
-           this.BindingContext)
+            //pagina nemodala - navigare ierarhica, utilizam proprietatea Navigation a obiectului Pagina
+            await Navigation.PushAsync(new ProductPage((ShopList) this.BindingContext)    
             {
                 BindingContext = new Product()
             });

@@ -22,10 +22,10 @@ namespace Lesan_Maria_Lab10
                 return database;
             }
         }
-        public App()
+        public App()              //Este responsabila pentru instantierea primei pagini care va fi afisata de aplicatie pe fiecare platforma
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new ListEntryPage());
+            MainPage = new NavigationPage(new AppMasterDetailPage());
 
             
         }

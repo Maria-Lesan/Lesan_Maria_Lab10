@@ -7,6 +7,14 @@
             <Editor Placeholder="Enter product name" Margin="20"
  Text="{Binding Description}"
  HeightRequest="50" />
+            <!--• Utilizat pentru a afisa elemente in randuri si coloane
+care pot avea dimensiuni absolute sau relative
+• Randurile si coloanele sunt specificate cu proprietatile
+RowDefinitions si ColumnDefinitions
+• Pentru a pozitiona elemente specifice in grid se utilizeaza proprietatile
+atasate Grid.Column si Grid.Row
+• Pentru ca elementele sa ocupe mai multe randuri sau coloane se
+utilizeaza proprietarile atasate Grid.RowSpan si Grid.ColumnSpan-->
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />

@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Lesan_Maria_Lab10.ListEntryPage">
+             x:Class="Lesan_Maria_Lab10.ListEntryPage"
+            
+            >
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add Shopping List"
+        <ToolbarItem Text="Categorie Nouă"
  Clicked="OnShopListAddedClicked" />
     </ContentPage.ToolbarItems>
     <ListView x:Name="listView"

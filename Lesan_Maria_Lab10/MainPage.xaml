@@ -2,9 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lesan_Maria_Lab10.MainPage">
-
+    <!--Organizeaza elementele intr-o stiva – orizontal/vertical
+    Proprietatea Orientation specifica directia. In mod implicit orientarea
+este verticala
+• Este utilizat de obicei pentru a aranja subsectiunile unei
+pagini
+• Deseori utilizat ca un layout parinte , care contine
+alte layout-uri copil-->
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+        <Frame BackgroundColor="#F1C6E7" Padding="24" CornerRadius="0">
             <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
