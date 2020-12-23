@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lesan_Maria_Lab10.ListEntryPage"
-            
+            BackgroundColor="#F0E6EB"
             >
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Categorie Nouă"

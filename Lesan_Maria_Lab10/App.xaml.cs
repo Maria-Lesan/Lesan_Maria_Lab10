@@ -25,7 +25,7 @@ namespace Lesan_Maria_Lab10
         public App()              //Este responsabila pentru instantierea primei pagini care va fi afisata de aplicatie pe fiecare platforma
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new AppMasterDetailPage());
+            MainPage = new AppMasterDetailPage();
 
             
         }

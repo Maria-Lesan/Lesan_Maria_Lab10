@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Lesan_Maria_Lab10.ProductPage">
+             x:Class="Lesan_Maria_Lab10.ProductPage"
+             >
     <ContentPage.Content>
         <StackLayout Margin="20">
-            <Editor Placeholder="Enter product name" Margin="20"
+            <Editor Placeholder="Introduceți numele cărții citite" Margin="20"
  Text="{Binding Description}"
  HeightRequest="50" />
             <!--• Utilizat pentru a afisa elemente in randuri si coloane
@@ -17,21 +18,16 @@ atasate Grid.Column si Grid.Row
 utilizeaza proprietarile atasate Grid.RowSpan si Grid.ColumnSpan-->
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="1*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button Text="Save"
- Clicked="OnSaveButtonClicked" />
-                <Button Grid.Column="1"
- Text="Delete"
-Clicked="OnDeleteButtonClicked"/>
-                <ListView Grid.Row="1" x:Name="listView"
- Margin="20"
- ItemSelected="OnListViewItemSelected">
+                <Button Text="Salvează" BackgroundColor="#eab0d2" Clicked="OnSaveButtonClicked" />
+                <Button Grid.Column="1" BackgroundColor="#eab0d2" Text="Șterge" Clicked="OnDeleteButtonClicked"/>
+                <ListView Grid.Row="1" Grid.ColumnSpan="2"  x:Name="listView" Margin="20" ItemSelected="OnListViewItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text="{Binding Description}" />
