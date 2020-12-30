@@ -27,6 +27,55 @@ utilizeaza proprietarile atasate Grid.RowSpan si Grid.ColumnSpan-->
                 </Grid.ColumnDefinitions>
                 <Button Text="Salvează" BackgroundColor="#eab0d2" Clicked="OnSaveButtonClicked" />
                 <Button Grid.Column="1" BackgroundColor="#eab0d2" Text="Șterge" Clicked="OnDeleteButtonClicked"/>
+                
+                
+                <!--<ListView Grid.Row="1" Grid.ColumnSpan="2"  x:Name="listView" Margin="20,80" ItemSelected="OnListViewItemSelected" HasUnevenRows="True" ItemTapped="listView_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="{Binding Description}" />
+                                    <Button Text="Details" IsVisible="{Binding IsVisible}" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+
+
+
+                <!--<ListView Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Products}" x:Name="listView" Margin="0,80" ItemSelected="OnListViewItemSelected" HasUnevenRows="True" ItemTapped="listView_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="20">
+                                    <Label Text="{Binding Description}" />
+                                     <StackLayout IsVisible="{Binding IsVisible}"
+                                     Orientation="Horizontal"
+                                     Margin="0,30,0,0">
+                            <Button Text="Details"
+                                    BackgroundColor="DarkGreen"
+                                    TextColor="White"
+                                    WidthRequest="100"
+                                    FontSize="24" />
+                            <Button Text="Edit"
+                                    BackgroundColor="DodgerBlue"
+                                    TextColor="White"
+                                    WidthRequest="100"
+                                    FontSize="24"/>
+                            <Button Text="Delete"
+                                    BackgroundColor="DarkRed"
+                                    TextColor="White"
+                                    WidthRequest="100"
+                                    FontSize="24" />
+                        </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+
+
                 <ListView Grid.Row="1" Grid.ColumnSpan="2"  x:Name="listView" Margin="20" ItemSelected="OnListViewItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>

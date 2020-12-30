@@ -14,5 +14,9 @@ namespace Lesan_Maria_Lab10.Models
         public string Description { get; set; }
         [OneToMany]
         public List<ListProduct> ListProducts { get; set; }
+
+
+
+       public bool IsVisible { get; set; }
     }
 }

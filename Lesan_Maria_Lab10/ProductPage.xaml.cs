@@ -55,5 +55,26 @@ namespace Lesan_Maria_Lab10
                 await Navigation.PopAsync();
             }
         }
+
+        //private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
+        //{
+        //    var vm = BindingContext as ProductPage;
+        //    var product = e.Item as Product;
+        //    vm.HideOrShowProduct(product);
+        //}
+
+        //private void HideOrShowProduct(Product product)
+        //{
+        //    product.IsVisible = true;
+        //    UpdateProducts(product);
+            
+        //}
+
+        //private void UpdateProducts(Product product)
+        //{
+        //    var index = Products.IndexOf(product);
+        //    Products.Remove(product);
+        //    Products.Insert(index, product);
+        //}
     }
 }
