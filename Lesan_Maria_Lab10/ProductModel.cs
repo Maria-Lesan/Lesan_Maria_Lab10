@@ -15,7 +15,7 @@ namespace Lesan_Maria_Lab10
         private Product _oldProduct;
 
         public ObservableCollection<Product> Products { get; set; }
-
+        //listView.ItemsSource = await App.Database.GetProductsAsync();
         public ProductModel()
         {
             Products = new ObservableCollection<Product>

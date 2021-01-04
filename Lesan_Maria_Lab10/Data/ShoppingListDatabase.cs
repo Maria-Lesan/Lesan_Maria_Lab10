@@ -73,6 +73,35 @@ namespace Lesan_Maria_Lab10.Data
                 return _database.InsertAsync(listp);
             }
         }
+
+
+
+
+        public Task<int> DeleteListProductAsync(ListProduct listProduct)
+        {
+            return _database.DeleteAsync(listProduct);
+        }
+
+        public Task<ListProduct> GetListProductAsync(int shopListId, int productId)
+        {
+            return _database.Table<ListProduct>()
+            .Where(i => i.ShopListID == shopListId && i.ProductID == productId)
+           .FirstOrDefaultAsync();
+        }
+
+
+
+
+
+        public Task<Product> GetProductAsync(int productId)
+        {
+            return _database.Table<Product>()
+                .Where(i => i.ID == productId)
+                .FirstOrDefaultAsync();
+        }
+
+         
+
         public Task<List<Product>> GetListProductsAsync(int shoplistid)
         {
             return _database.QueryAsync<Product>(

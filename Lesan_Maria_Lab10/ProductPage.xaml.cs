@@ -56,25 +56,31 @@ namespace Lesan_Maria_Lab10
             }
         }
 
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                var selectedProductId = ((Button)sender).CommandParameter;
+                var selectedProduct = App.Database.GetProductAsync((int)selectedProductId).Result;
+                await App.Database.DeleteProductAsync(selectedProduct);
+
+                //Forteaza reafisarea tuturor elementelor din list view
+                OnAppearing();
+            }
+            catch
+            {
+                //TODO
+            }
+        }
+
+
         //private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         //{
-        //    var vm = BindingContext as ProductPage;
+        //    var vm = BindingContext as ProductModel;
         //    var product = e.Item as Product;
-        //    vm.HideOrShowProduct(product);
+        //    vm.ShowOrHidePoducts(product);
         //}
 
-        //private void HideOrShowProduct(Product product)
-        //{
-        //    product.IsVisible = true;
-        //    UpdateProducts(product);
-            
-        //}
-
-        //private void UpdateProducts(Product product)
-        //{
-        //    var index = Products.IndexOf(product);
-        //    Products.Remove(product);
-        //    Products.Insert(index, product);
-        //}
     }
 }

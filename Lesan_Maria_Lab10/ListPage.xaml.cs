@@ -53,5 +53,24 @@ namespace Lesan_Maria_Lab10
 
             listView.ItemsSource = await App.Database.GetListProductsAsync(shopl.ID);
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                var currentShoppingList = (ShopList)this.BindingContext;
+                var selectedProduct = ((Button)sender).CommandParameter;
+
+                var listProductToDelete = App.Database.GetListProductAsync(currentShoppingList.ID, (int)selectedProduct).Result;
+                await App.Database.DeleteListProductAsync(listProductToDelete);
+
+                //Forteaza reafisarea tuturor elementelor din list view
+                OnAppearing();
+            }
+            catch
+            {
+                //TODO
+            }
+        }
     }
 }

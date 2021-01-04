@@ -24,13 +24,41 @@
                 
                 <Button Text="Salvează" BackgroundColor="#eab0d2" Clicked="OnSaveButtonClicked" />
                 <Button Grid.Column="1" BackgroundColor="#eab0d2" Text="Șterge" Clicked="OnDeleteButtonClicked"/>
+                
+                
+                
+                <!--Modificare 1 
                 <ListView Grid.Row="1" Grid.ColumnSpan="2" x:Name="listView" Margin="20">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Detail="{Binding Description}" />
                         </DataTemplate>
                     </ListView.ItemTemplate>
+                </ListView>-->
+                <ListView Grid.Row="1" Grid.ColumnSpan="2" x:Name="listView" Margin="20">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50*" />
+                                        <ColumnDefinition Width="50*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label  Grid.Column="0" Text="{Binding Description}" TextColor="Black" Margin="10, 10, 10 ,10"/>
+                                    <Button Grid.Column="1" CommandParameter="{Binding ID}" Text="Remove" Clicked="Button_Clicked"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
                 </ListView>
+                
+                
+                
+                
             </Grid>
             <Button Text="Adaugă o nouă carte" BackgroundColor="#eab0d2" Clicked="OnChooseButtonClicked"/>
         </StackLayout>
